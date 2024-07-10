@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: NimashL
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: title
+                  type: varchar(70)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(30)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: published_date
+                  type: Date
+                  constraints:
+                    nullable: false
